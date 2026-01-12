@@ -1,0 +1,17 @@
+# VSCode Shortcuts (Mac)
+
+- **Cmd + P**: Quick Open (Go to file)
+- **Cmd + Shift + P**: Show Command Palette
+- **Cmd + /**: Toggle Line Comment
+- **Cmd + B**: Toggle Sidebar
+- **Cmd + F**: Find
+- **Cmd + Shift + F**: Find in Files
+- **Ctrl + ~**: Toggle Terminal
+- **Alt + Click**: Multi-cursor selection
+- **Cmd + D**: Select next occurrence
+- **Tab**: Code completion / Emmet expansion (Input a few letters and press Tab)
+
+# Code Completion
+- Just type the beginning of a function or variable name, and a list of suggestions will appear.
+- Press **Tab** or **Enter** to accept the suggestion.
+- For AI-assisted code completion (if enabled), use **Tab** to accept the ghost text.
