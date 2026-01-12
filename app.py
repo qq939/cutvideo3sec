@@ -13,6 +13,18 @@ TARGET_URL = "http://videocut.dimond.top/overall"
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
+@app.route('/')
+def index():
+    return '''
+    <!doctype html>
+    <title>Upload Video</title>
+    <h1>Upload Video to Cut and Send</h1>
+    <form action="/upload_and_cut" method=post enctype=multipart/form-data>
+      <input type=file name=video>
+      <input type=submit value=Upload>
+    </form>
+    '''
+
 @app.route('/upload_and_cut', methods=['POST'])
 def upload_and_cut():
     if 'video' not in request.files:

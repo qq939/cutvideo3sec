@@ -67,5 +67,11 @@ class TestVideoCutApp(unittest.TestCase):
         response = self.client.post('/upload_and_cut', data={}, content_type='multipart/form-data')
         self.assertEqual(response.status_code, 400)
 
+    def test_index_page(self):
+        """Test that the index page returns 200 OK"""
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'html', response.data.lower())
+
 if __name__ == '__main__':
     unittest.main()
