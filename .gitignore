@@ -5,3 +5,5 @@ venv/
 .DS_Store
 tmp/
 temp_ref_repo/
+*.mp4
+*.MP4

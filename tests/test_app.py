@@ -32,7 +32,7 @@ class TestVideoCutApp(unittest.TestCase):
                 f.write(b'dummy segment content')
         
         mock_subclip.write_videofile.side_effect = side_effect_write
-        mock_clip_instance.subclip.return_value = mock_subclip
+        mock_clip_instance.subclipped.return_value = mock_subclip
         
         mock_video_clip.return_value = mock_clip_instance
         
@@ -55,7 +55,7 @@ class TestVideoCutApp(unittest.TestCase):
         # Wait, if duration is 10, steps: 0, 3, 6, 9.
         # 0-3, 3-6, 6-9, 9-10.
         # So 4 calls to subclip.
-        self.assertEqual(mock_clip_instance.subclip.call_count, 4)
+        self.assertEqual(mock_clip_instance.subclipped.call_count, 4)
         
         # Verify posts
         self.assertEqual(mock_post.call_count, 4)
